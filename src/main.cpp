@@ -1,7 +1,7 @@
 #include <opencv2/opencv.hpp>
 #include "help.cpp"
 
-#define THRESHOLD 0.9
+#define DEFAULT_THRESHOLD 0.9
 
 using namespace std;
 using namespace cv;
@@ -14,14 +14,15 @@ int main(int argc, char* argv[]) {
     Mat testImg = imread(argv[2], 1);
     double minVal, maxVal;
     Point minLoc, maxLoc;
+    double valThreshold = argc == 4 ? stod(argv[3]) : DEFAULT_THRESHOLD;
 
     matchTemplate(targetImg, testImg, result, CV_TM_CCOEFF_NORMED);
-    threshold(result, result, THRESHOLD, 1, CV_THRESH_TOZERO);
+    threshold(result, result, valThreshold, 1, CV_THRESH_TOZERO);
 
     minMaxLoc(result, &minVal, &maxVal, &minLoc, &maxLoc, Mat());
 
-    if (maxVal >= THRESHOLD) {
-        cout << maxLoc << endl;
+    if (maxVal >= valThreshold) {
+        cout << "[" << maxLoc.x << ", " << maxLoc.y << ", " << maxVal << "]" << endl;
         return 0;
     }
     
