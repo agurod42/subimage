@@ -23,8 +23,7 @@ int main(int argc, char* argv[]) {
 
     if (maxVal >= valThreshold) {
         cout << "[" << maxLoc.x << ", " << maxLoc.y << ", " << maxVal << "]" << endl;
-        return 0;
     }
     
-    return 1;
+    return 0;
 }
