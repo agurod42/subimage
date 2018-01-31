@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
     Mat testImg = imread(argv[2], 1);
     double minVal, maxVal;
     Point minLoc, maxLoc;
-    double valThreshold = argc == 4 ? stod(argv[3]) : DEFAULT_THRESHOLD;
+    double valThreshold = argc == 4 ? strtod(argv[3], NULL) : DEFAULT_THRESHOLD;
 
     matchTemplate(targetImg, testImg, result, CV_TM_CCOEFF_NORMED);
     threshold(result, result, valThreshold, 1, CV_THRESH_TOZERO);
