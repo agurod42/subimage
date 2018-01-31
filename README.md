@@ -2,9 +2,11 @@
 
 Minimal and pretty dumb command line tool to find the location of an image within a larger image.
 
-## 1. Installing Dependencies
+## Build
 
-### Linux
+### 1. Installing Dependencies
+
+#### Linux
 
 Compiler:
 
@@ -26,7 +28,7 @@ make
 make install
 ```
 
-### macOS
+#### macOS
 
 Compiler:
 
@@ -41,7 +43,7 @@ brew install opencv3 --with-ffmpeg
 brew link opencv3 --force
 ```
 
-### Windows
+#### Windows
 
 Compiler: 
 
@@ -51,13 +53,15 @@ OpenCV:
 
 [opencv-3.2.0-vc14](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download)
     
-## 2. Build
+### 2. Build
 
 `cd build`
+
 `cmake ../`
+
 `make`
 
-## 3. Run
+### 3. Run
 
 `./subimage ../data/large.png ../data/small.png`
 
