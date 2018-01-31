@@ -6,52 +6,52 @@ Minimal and pretty dumb command line tool to find the location of an image withi
 
 ### 1. Installing Dependencies
 
-#### Linux
+* **Linux**
 
-Compiler:
+    Compiler:
 
-```sh
-apt-get install cmake g++ gdb
-```
+    ```sh
+    apt-get install cmake g++ gdb
+    ```
 
-OpenCV:
+    OpenCV:
 
-```sh
-apt-get install git libavcodec-dev libavformat-dev libgtk2.0-dev libswscale-dev pkg-config
-cd ~/
-git clone https://github.com/opencv/opencv.git
-cd opencv
-mkdir release
-cd release
-cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local ..
-make
-make install
-```
+    ```sh
+    apt-get install git libavcodec-dev libavformat-dev libgtk2.0-dev libswscale-dev pkg-config
+    cd ~/
+    git clone https://github.com/opencv/opencv.git
+    cd opencv
+    mkdir release
+    cd release
+    cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local ..
+    make
+    make install
+    ```
 
-#### macOS
+* **macOS**
 
-Compiler:
+    Compiler:
 
-```sh
-brew install cmake
-```
+    ```sh
+    brew install cmake
+    ```
 
-OpenCV:
+    OpenCV:
 
-```sh
-brew install opencv3 --with-ffmpeg
-brew link opencv3 --force
-```
+    ```sh
+    brew install opencv3 --with-ffmpeg
+    brew link opencv3 --force
+    ```
 
-#### Windows
+* **Windows**
 
-Compiler: 
+    Compiler: 
 
-[cmake-3.9.0-win64-x64](https://cmake.org/files/v3.9/cmake-3.9.0-win64-x64.msi)
+    Install [cmake-3.9.0-win64-x64](https://cmake.org/files/v3.9/cmake-3.9.0-win64-x64.msi)
 
-OpenCV:
+    OpenCV:
 
-[opencv-3.2.0-vc14](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download)
+    Install [opencv-3.2.0-vc14](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download)
     
 ### 2. Build
 
